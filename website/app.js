@@ -18,7 +18,7 @@ function performAction(e) {
     const feelings = document.getElementById('feelings').value;
     getWheather(baseURL, zipCode, apiKey)
     .then(function(data){
-      postData('/add', {date:newDate, temp:data.main.temp, feelings:feelings});
+      postData('/add', {date:newDate, location:data.name, temp:data.main.temp, feelings:feelings});
     })
     .then(
       updateUI('/all')
@@ -64,6 +64,7 @@ const updateUI = async () => {
     const allData = await req.json();
     console.log(allData);
     document.getElementById('date').innerHTML = allData[allData.length - 1].date;
+    document.getElementById('location').innerHTML = allData[allData.length - 1].location;
     document.getElementById('temp').innerHTML = allData[allData.length - 1].temp;
     document.getElementById('content').innerHTML = allData[allData.length - 1].feelings;
 

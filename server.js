@@ -43,6 +43,7 @@ app.get('/all', function (req, res) {
 app.post('/add', function (req, res) {
     newEntry = {
         date: req.body.date,
+        location: req.body.location,
         temp: req.body.temp,
         feelings: req.body.feelings
     };
