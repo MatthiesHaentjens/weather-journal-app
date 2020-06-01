@@ -36,9 +36,9 @@ Return Endpoint Data: GET Route II: Client Side
 POST Route
 - You should be able to add an entry to the project endpoint using a POST route setup on the server side and
   executed on the client side as an asynchronous function. - CHECK
-- The client side function should take two arguments, the URL to make a POST to, and an object holding the data to POST.
+- The client side function should take two arguments, the URL to make a POST to, and an object holding the data to POST. - CHECK
 - The server side function should create a new entry in the apps endpoint (the named JS object)
-  consisting of the data received from the client side POST.
+  consisting of the data received from the client side POST. - CHECK
 
 Dynamic UI
 
@@ -49,16 +49,16 @@ Naming HTML Inputs and Buttons For Interaction
 
 Assigning Element Properties Dynamically
 - The div with the id, entryHolder should have three child divs with the ids:
-  - date
-  - temp
-  - content
+  - date - CHECK
+  - temp - CHECK
+  - content - CHECL
 
 Event Listeners
-- Adds an event listener to an existing HTML button from DOM using Vanilla JS.
+- Adds an event listener to an existing HTML button from DOM using Vanilla JS. - CHECK
 - In the file app.js, the element with the id of generate should have an addEventListener() method called on it,
-  with click as the first parameter, and a named callback function as the second parameter.
+  with click as the first parameter, and a named callback function as the second parameter. - CHECK
 
 Dynamically Update UI
-- Sets the properties of existing HTML elements from the DOM using Vanilla JavaScript.
+- Sets the properties of existing HTML elements from the DOM using Vanilla JavaScript. - CHECK
 - Included in the async function to retrieve that app’s data on the client side, existing DOM elements
-  should have their innerHTML properties dynamically set according to data returned by the app route.
+  should have their innerHTML properties dynamically set according to data returned by the app route. - CHECK
