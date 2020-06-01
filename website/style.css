@@ -29,8 +29,9 @@ body{
   margin-top: 15px;
 }
 
-#entryHolder{
-
+.entryHolder{
+  border-collapse: collapse;
+  width: 100%;
 }
 
 #date{
@@ -112,4 +113,10 @@ button:focus {
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
 }

@@ -17,8 +17,8 @@
       </div>
 
       <div class ="zip_entry">
-        <label for="zip">Enter digits of your zipcode and country abbreviation (e.g. US) here</label>
-        <input type="text" id="zip" placeholder="Enter here: e.g. 1094,NL">
+        <label for="zip">Enter digits of your zipcode and country code (e.g. US) here</label>
+        <input type="text" id="zip" placeholder="Format: zipcode,country code">
       </div>
 
       <div class ="feelings_entry">
@@ -29,12 +29,20 @@
 
       <div class ="entries">
         <div class = "title">Most Recent Entry</div>
-        <div id = "entryHolder">
-          <div id = "date"></div>
-          <div id = "location"></div>
-          <div id = "temp"></div>
-          <div id = "content"></div>
-        </div>
+        <table class = "entryHolder">
+          <tr>
+            <th>Date</th>
+            <th>City</th>
+            <th>Temperature</th>
+            <th>Feelings</th>
+          </tr>
+          <tr>
+            <td id = "date"></td>
+            <td id = "location"></td>
+            <td id = "temp"></td>
+            <td id = "content"></td>
+          </tr>
+        </table>
       </div>
 
     </div>
