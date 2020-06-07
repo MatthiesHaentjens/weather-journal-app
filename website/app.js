@@ -13,16 +13,12 @@ let newDate = d.getMonth()+1 +'.'+ d.getDate()+'.'+ d.getFullYear();
 document.getElementById('generate').addEventListener('click', performAction);
 
 /* Function called by event listener */
-function performAction(e) {
+async function performAction(e) {
     const zipCode = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
-    getWheather(baseURL, zipCode, apiKey)
-    .then(function(data){
-      postData('/add', {date:newDate, location:data.name, temp:data.main.temp, feelings:feelings});
-    })
-    .then(
-      updateUI('/all')
-    )
+    data = await getWheather(baseURL, zipCode, apiKey)
+    await postData('/add', {date:newDate, location:data.name, temp:data.main.temp, feelings:feelings});
+    await updateUI('/all')
 }
 
 /* Function to GET Web API Data*/

@@ -1,5 +1,6 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = [];
+const projectData = [
+];
 
 // Require Express to run server and routes
 const express = require('express');
@@ -35,6 +36,7 @@ function listening() {
 // Initialize all route with a callback function
 // Callback function to complete GET '/all'
 app.get('/all', function (req, res) {
+  console.log('all', projectData)
   res.send(projectData);
 })
 
