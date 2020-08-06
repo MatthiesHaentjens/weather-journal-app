@@ -16,9 +16,9 @@ document.getElementById('generate').addEventListener('click', performAction);
 async function performAction(e) {
     const zipCode = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
-    data = await getWheather(baseURL, zipCode, apiKey)
+    data = await getWheather(baseURL, zipCode, apiKey);
     await postData('/add', {date:newDate, location:data.name, temp:data.main.temp, feelings:feelings});
-    await updateUI('/all')
+    await updateUI();
 }
 
 /* Function to GET Web API Data*/
@@ -64,7 +64,8 @@ const updateUI = async () => {
     document.getElementById('temp').innerHTML = allData[allData.length - 1].temp;
     document.getElementById('content').innerHTML = allData[allData.length - 1].feelings;
 
-  }catch(error){
+  }
+  catch(error){
     console.log("error", error);
   }
 }
